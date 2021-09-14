@@ -26,11 +26,10 @@ def effectuerRotation(nombreComplexe, angle_rotation, trouverModule):
 
     # TODO: Calculer le nouveau nombre complexe après rotation, assigner le nouveau nombre complexe à la variable 'resultat'
 
-    # resultat = nombreComplexe * complex(
-    #     math.cos(math.radians(angle_rotation)) + math.sin(math.radians(angle_rotation))
-    # )
-
-    resultat = complex(1 + 3j)
+    resultat = complex(
+        nombreComplexe.real * math.cos(math.radians(angle_rotation)),
+        nombreComplexe.imag * math.sin(math.radians(angle_rotation)),
+    )
 
     nouveauModule = trouverModule(resultat)
     nouvelAngle = trouverAngle(resultat)

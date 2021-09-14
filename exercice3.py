@@ -1,37 +1,39 @@
-
 def decomposer(secondes):
-    secondes_dans_annes = 365 * 24 * 2600
-    secondes_dans_semaine = 7 * 24 * 3600
-    secondes_dans_jour = 24 * 60 * 60
-    secondes_dans_heure = 60 * 60
-    seconde_dans_minute = 60
+    SECONDES_DANS_ANNEE = 60 * 60 * 24 * 365
+    SECONDES_DANS_SEMAINES = 60 * 60 * 24 * 7
+    SECONDES_DANS_JOUR = 60 * 60 * 24
+    SECONDES_DANS_HEURE = 60 * 60
+    SECONDES_DANS_MINUTES = 60
 
     # TODO: Assigner à la variable "annees" le nombre d'années
-    annees = secondes // secondes_dans_annes
-    secondes -= annees * secondes_dans_annes
+    annees = secondes // SECONDES_DANS_ANNEE
+    secondes -= annees * SECONDES_DANS_ANNEE
+
     # TODO: Assigner à la variable "semaines" le nombre de semaines restantes
-    semaines = secondes // secondes_dans_semaine
-    secondes -= semaines * secondes_dans_semaine
+    semaines = secondes // SECONDES_DANS_SEMAINES
+    secondes -= semaines * SECONDES_DANS_SEMAINES
 
     # TODO: Assigner à la variable "jours" le nombre de jours restants
-    jours = secondes // secondes_dans_jour
-    secondes -= jours * secondes_dans_jour
+    jours = secondes // SECONDES_DANS_JOUR
+    secondes -= jours * SECONDES_DANS_JOUR
 
     # TODO: Assigner à la variable "heures" le nombre d'heures restantes
-    heures = secondes // secondes_dans_heure
-    secondes -= heures * secondes_dans_heure
+    heures = secondes // SECONDES_DANS_HEURE
+    secondes -= heures * SECONDES_DANS_HEURE
 
     # TODO: Assigner à la variable "minute" le nombre de minutes restantes
-    minutes = secondes // seconde_dans_minute
+    minutes = secondes // SECONDES_DANS_MINUTES
+    secondes -= minutes * SECONDES_DANS_MINUTES
 
     # TODO: Assigner à la variable "secondes" le nombre de secondes restantes
-    secondes -= minutes * seconde_dans_minute
+    secondes = secondes
 
     # TODO: Afficher le nombres d'années, semaines, jours, heures, minutes et secondes
-    print(annees ,semaines ,jours ,heures ,minutes ,secondes)
+    print(annees, semaines, jours, heures, minutes, secondes)
 
-    return (annees ,semaines ,jours ,heures ,minutes ,secondes)
+    return (annees, semaines, jours, heures, minutes, secondes)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     secondes = int(input("Entrer les secondes: "))
     print(decomposer(secondes))
