@@ -29,7 +29,9 @@ def decomposer(secondes):
     secondes = secondes
 
     # TODO: Afficher le nombres d'années, semaines, jours, heures, minutes et secondes
-    print(annees, semaines, jours, heures, minutes, secondes)
+    print(
+        f"{annees} années, {semaines} semaines, {jours} jours, {heures} heures, {minutes} minutes et {secondes} secondes"
+    )
 
     return (annees, semaines, jours, heures, minutes, secondes)
 
