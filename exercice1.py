@@ -8,6 +8,8 @@ def fizzBuzz(n):
         resultat = "fizz"
     elif n % 5 == 0:
         resultat = "buzz"
+    else:
+        resultat = str(n)
     return resultat
 
 
